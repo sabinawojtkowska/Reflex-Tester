@@ -1,11 +1,11 @@
-# 🎮 Reflex Tester — Gra na refleks z Arduino UNO
+# Reflex Tester — Gra na refleks z Arduino UNO
 
 [![License: CC0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 > Sprawdź swój refleks! Zapal LED losowo zapala się – wciśnij odpowiedni przycisk jak najszybciej.  
 > Czas reakcji wyświetla się na LCD i pokazuje servo jak wskazówka tachometru.
 
-📺 **[Film demonstracyjny na YouTube »](https://youtube.com/LINK_DO_FILMU)**
+**[Film demonstracyjny na YouTube »](https://youtube.com/)**
 
 ---
 
@@ -26,55 +26,55 @@
 ## Poziomy trudności
 
 | Poziom | Aktywne LED/przyciski | Czas na reakcję |
-|:------:|:--------------------:|:---------------:|
-| 1      | 2                    | 2000 ms         |
-| 2      | 3                    | 1500 ms         |
-| 3      | 4                    | 1000 ms         |
-| 4      | 4                    | 750 ms          |
+| :----: | :-------------------: | :-------------: |
+|   1    |           2           |     2000 ms     |
+|   2    |           3           |     1500 ms     |
+|   3    |           4           |     1000 ms     |
+|   4    |           4           |     750 ms      |
 
 ---
 
 ## Lista elementów
 
-| Element | Ilość | Uwagi |
-|---|:---:|---|
-| Arduino UNO | 1 | |
-| Wyświetlacz LCD I2C 16x2 | 1 | Adres 0x27 lub 0x3F |
-| Czujnik HC-SR04 | 1 | |
-| Dioda LED | 4 | Różne kolory jeśli możliwe |
-| Tact switch | 4 | |
-| Micro servo SG90 | 2 | |
-| Enkoder obrotowy | 1 | Waveshare SKU 9533 |
-| Potencjometr | 1 | |
-| Rezystor 220 Ω | 4 | Do każdej LED |
-| Płytka stykowa + kable | – | |
+| Element                  | Ilość | Uwagi                      |
+| ------------------------ | :---: | -------------------------- |
+| Arduino UNO              |   1   |                            |
+| Wyświetlacz LCD I2C 16x2 |   1   | Adres 0x27 lub 0x3F        |
+| Czujnik HC-SR04          |   1   |                            |
+| Dioda LED                |   4   | Różne kolory jeśli możliwe |
+| Tact switch              |   4   |                            |
+| Micro servo SG90         |   2   |                            |
+| Enkoder obrotowy         |   1   | Waveshare SKU 9533         |
+| Potencjometr             |   1   |                            |
+| Rezystor 1k Ω            |   4   | Do każdej LED              |
+| Płytka stykowa + kable   |   –   |                            |
 
 ---
 
 ## Schemat podłączenia
 
-| Element | Pin Arduino |
-|---|---|
-| LED 1 | D2 |
-| LED 2 | D3 |
-| LED 3 | D4 |
-| LED 4 | D5 |
-| Przycisk 1 | D6 |
-| Przycisk 2 | D7 |
-| Przycisk 3 | D8 |
-| Przycisk 4 | D9 |
-| Servo "gauge" (czas) | D10 |
-| Servo "level" (poziom) | D11 |
-| HC-SR04 TRIG | D12 |
-| HC-SR04 ECHO | D13 |
-| Potencjometr (środek) | A0 |
-| Enkoder SIA (CLK) | A1 |
-| Enkoder SIB (DT)  | A2 |
-| Enkoder SW        | A3 |
-| LCD SDA | A4 |
-| LCD SCL | A5 |
+| Element                | Pin Arduino |
+| ---------------------- | ----------- |
+| LED 1                  | D2          |
+| LED 2                  | D3          |
+| LED 3                  | D4          |
+| LED 4                  | D5          |
+| Przycisk 1             | D6          |
+| Przycisk 2             | D7          |
+| Przycisk 3             | D8          |
+| Przycisk 4             | D9          |
+| Servo "gauge" (czas)   | D10         |
+| Servo "level" (poziom) | D11         |
+| HC-SR04 TRIG           | D12         |
+| HC-SR04 ECHO           | D13         |
+| Potencjometr (środek)  | A0          |
+| Enkoder SIA (CLK)      | A1          |
+| Enkoder SIB (DT)       | A2          |
+| Enkoder SW             | A3          |
+| LCD SDA                | A4          |
+| LCD SCL                | A5          |
 
-**LED:** długa nóżka → rezystor 220 Ω → pin Arduino; krótka nóżka → GND  
+**LED:** długa nóżka → rezystor 1k Ω → pin Arduino; krótka nóżka → GND  
 **Przyciski:** jeden pin → Arduino (INPUT_PULLUP), drugi pin → GND  
 **Potencjometr:** lewy → GND, środek → A0, prawy → 5V
 
@@ -87,6 +87,7 @@
 Otwórz Arduino IDE → **Szkic → Dołącz bibliotekę → Zarządzaj bibliotekami**
 
 Wyszukaj i zainstaluj:
+
 - `LiquidCrystal_I2C` (autor: Frank de Brabander)
 - `Servo` – wbudowana, nie trzeba instalować
 
@@ -120,13 +121,13 @@ HC-SR04 ECHO  →  D13
 
 ### Krok 4 — Podłącz diody LED
 
-Każda dioda wymaga rezystora 220 Ω (chroni przed spaleniem).
+Każda dioda wymaga rezystora 1k Ω (chroni przed spaleniem).
 
 ```
-D2 → rezystor 220Ω → długa nóżka LED1 → krótka nóżka → GND
-D3 → rezystor 220Ω → długa nóżka LED2 → krótka nóżka → GND
-D4 → rezystor 220Ω → długa nóżka LED3 → krótka nóżka → GND
-D5 → rezystor 220Ω → długa nóżka LED4 → krótka nóżka → GND
+D2 → rezystor 1kΩ → długa nóżka LED1 → krótka nóżka → GND
+D3 → rezystor 1kΩ → długa nóżka LED2 → krótka nóżka → GND
+D4 → rezystor 1kΩ → długa nóżka LED3 → krótka nóżka → GND
+D5 → rezystor 1kΩ → długa nóżka LED4 → krótka nóżka → GND
 ```
 
 > Długa nóżka (+) = anoda, krótka nóżka (-) = katoda.
@@ -209,14 +210,14 @@ Prawy pin   →  5V
 
 ## Rozwiązywanie problemów
 
-| Problem | Możliwa przyczyna | Rozwiązanie |
-|---|---|---|
-| LCD nic nie pokazuje | Zły adres I2C | Zmień 0x27 na 0x3F w kodzie |
-| LCD pokazuje kwadraty | Za niski kontrast | Pokręć potencjometr z tyłu modułu |
-| Servo drży | Za mały prąd z USB | Zasil serwomechanizmy zewnętrznie |
-| Czujnik nie reaguje | Zbyt duża odległość | Pokręć potencjometrem w prawo |
+| Problem                         | Możliwa przyczyna                    | Rozwiązanie                                                               |
+| ------------------------------- | ------------------------------------ | ------------------------------------------------------------------------- |
+| LCD nic nie pokazuje            | Zły adres I2C                        | Zmień 0x27 na 0x3F w kodzie                                               |
+| LCD pokazuje kwadraty           | Za niski kontrast                    | Pokręć potencjometr z tyłu modułu                                         |
+| Servo drży                      | Za mały prąd z USB                   | Zasil serwomechanizmy zewnętrznie                                         |
+| Czujnik nie reaguje             | Zbyt duża odległość                  | Pokręć potencjometrem w prawo                                             |
 | Przycisk działa bez naciśnięcia | Kable po tej samej stronie przycisku | Podłącz kable po przeciwnych stronach (góra-dół) lub obróć przycisk o 90° |
-| Tylko jeden przycisk działa | Pozostałe źle zorientowane | Sprawdź orientację każdego przycisku osobno |
+| Tylko jeden przycisk działa     | Pozostałe źle zorientowane           | Sprawdź orientację każdego przycisku osobno                               |
 
 ---
 
