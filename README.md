@@ -5,7 +5,7 @@
 > Sprawdź swój refleks! Zapal LED losowo zapala się – wciśnij odpowiedni przycisk jak najszybciej.  
 > Czas reakcji wyświetla się na LCD i pokazuje servo jak wskazówka tachometru.
 
-**[Film demonstracyjny na YouTube »](https://youtube.com/)**
+**[Film demonstracyjny na YouTube »](https://youtube.com/shorts/jfGQCqqiEYI?is=CBfYQlIFeNpK-fi8)**
 
 ---
 
