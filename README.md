@@ -7,6 +7,8 @@
 
 **[Film demonstracyjny na YouTube »](https://youtube.com/shorts/jfGQCqqiEYI?is=CBfYQlIFeNpK-fi8)**
 
+![połączony układ](/img/IMG_0617.jpeg)
+
 ---
 
 ## Co robi projekt
@@ -221,6 +223,11 @@ Prawy pin   →  5V
 
 ---
 
+![gra](/img/IMG_0618.jpeg)
+
+![ekran](/img/IMG_0614.jpeg)
+
+---
 ## Licencja
 
 Projekt udostępniony na licencji **Creative Commons Zero (CC0 1.0)**.  
